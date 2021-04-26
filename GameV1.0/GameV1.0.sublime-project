@@ -1,0 +1,32 @@
+{
+	"folders":
+	[
+		{
+			"path": "bin/.."
+
+		}
+	],
+
+	"build_systems":
+	[
+		{
+			"name": "Debug",
+			"working_dir": "${project_path}",
+			"cmd": ["g++ -c src/*.cpp -std=c++14 -m64 -g -Wall -I include -I /usr/include && g++ *.o -o bin/debug/main -lglfw -lglut -lGLEW -lGLU -lGL && ./bin/debug/main"],
+			"selector": "source.c++",
+			"shell": true
+		},
+		{
+					
+			"name": "Release",
+			"working_dir": "${project_path}",
+			"cmd": ["g++ -c src/*.cpp -std=c++14 -m64 -g -Wall -I include -I /usr/include && g++ *.o -o bin/release/main -lglfw -lglut -lGLEW -lGLU -lGL && ./bin/release/main"],
+			"selector": "source.c++",
+			"shell": true
+		}
+
+	]
+
+
+
+}
